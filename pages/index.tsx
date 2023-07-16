@@ -8,6 +8,7 @@ import WorkExp from "@/components/WorkExp";
 import WhatIDo from "@/components/WhatIDo";
 import PageLoader from "@/components/PageLoader";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const poppins = Space_Grotesk({
     subsets: ["latin"],
@@ -24,7 +25,8 @@ export default function Home() {
             <Work />
             <WorkExp />
             <WhatIDo />
-            <Contact/>
+            <Contact />
+            <Footer />
         </main>
     );
 }

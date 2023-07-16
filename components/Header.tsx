@@ -14,39 +14,39 @@ const Header = () => {
     const headerData = [
         {
             title: "Home",
-            link: "",
+            link: "/",
         },
         {
             title: "About",
-            link: "",
+            link: "/#about",
         },
         {
             title: "Work",
-            link: "",
+            link: "/#work",
         },
         {
             title: "Photography",
-            link: "",
+            link: "/photography",
         },
         {
             title: "Contact",
-            link: "",
+            link: "/#contact",
         },
     ];
 
     return (
-        <section className="sticky top-0 z-40 mix-blend-exclusion backdrop-blur">
+        <section id="" className="sticky top-0 z-40 mix-blend-exclusion backdrop-blur">
         {/* <section className="sticky top-0 z-50 bg-primary"> */}
-            <header className="w-full p-4 md:px-16 py-8 flex items-center justify-between">
+            <header className="w-full p-4 md:px-16 py-8 lg:max-w-7xl lg:mx-auto flex items-center justify-between">
                 <div>
-                    <h1 className="text-xl font-semibold">Surendar PD</h1>
+                    <Link href="/" className="text-xl font-semibold">Surendar PD</Link>
                 </div>
                 <div className="gap-4 hidden lg:flex">
                     {headerData.map((item, idx) => {
                         return (
                             <Link
                                 key={idx}
-                                href="#"
+                                href={item.link}
                                 className="hover:text-secondary transition-all duration-300"
                             >
                                 {item.title}

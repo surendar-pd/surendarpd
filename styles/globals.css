@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
  
+
+::-webkit-scrollbar {
+  @apply w-1 bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary mix-blend-exclusion rounded-full;
+}
+
+html {
+  scroll-behavior: smooth!important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

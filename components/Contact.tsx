@@ -12,7 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 const Contact = () => {
     return (
-        <section className="bg-white text-primary">
+        <section id="contact" className="bg-white text-primary">
             <div className="w-full flex flex-col md:flex-col lg:max-w-7xl lg:mx-auto gap-4 p-4 md:px-16 py-[40px] md:py-[80px] lg:py-[100px]">
                 <h1 className="text-2xl md:text-4xl lg:text-6xl font-semibold mb-4 md:mb-8 lg:mb-12">
                     Let&apos;s Talk
@@ -65,7 +65,7 @@ const Contact = () => {
                             />
                         </div>
                         <div className="w-full md:w-fit">
-                            <button className="w-full md:w-fit h-full rounded-lg text-center border border-primary transition-all bg-secondary px-8 py-4 duration-300 hover:translate-y-1 -translate-y-1 hover:shadow-none shadow-[4px_4px_#000000]">
+                            <button className="w-full md:w-fit h-full rounded-lg font-medium text-center border border-primary transition-all bg-secondary px-8 py-4 duration-300 hover:translate-y-1 -translate-y-1 hover:shadow-none shadow-[4px_4px_#000000]">
                                 Just Send
                             </button>
                         </div>
