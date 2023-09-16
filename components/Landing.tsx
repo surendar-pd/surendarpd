@@ -10,7 +10,7 @@ const Landing = () => {
                         <strong>Hello</strong> I&apos;m
                     </h1>
                     <strong className="text-4xl md:text-6xl lg:text-8xl lg:ml-16 text-secondary">Surendar PD</strong>
-                    <p className="text-base lg:ml-28 lg:max-w-lg">
+                    <p className="text-base lg:ml-28 lg:max-w-lg mt-4   ">
                         I&apos;m a self-taught software developer with a focus
                         on Frontend development, User Experience & Photography.
                     </p>

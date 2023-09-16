@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const PhotographyPage = () => {
     return (
-        <main className="bg-primary text-white">
+        <main className="bg-slate-50 text-white">
             <PageLoader />
             <Header />
             <Photography />

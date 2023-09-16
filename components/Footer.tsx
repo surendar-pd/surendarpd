@@ -158,8 +158,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="pt-4 flex items-center gap-4 mt-2 border-t border-slate-800">
-                <p className="text-xs ">
+            <div className="pt-4 flex flex-col md:flex-row md:gap-4 items-center mt-2 border-t border-slate-800">
+                <p className="text-xs py-2 lg:mt-[1px]">
                     &copy; Copyright {new Date().getFullYear()} Surendar PD
                 </p>
                 <p className="text-xs">
