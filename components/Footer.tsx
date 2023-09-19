@@ -138,7 +138,7 @@ const Footer = () => {
                     <div className="">
                         <h1 className="font-medium mb-2">Legal</h1>
                         <div className="flex flex-col">
-                            <Link href="#">
+                            <Link href="/terms-and-conditions">
                                 <Button
                                     variant="link"
                                     className="text-slate-50 p-0 w-fit"
@@ -146,7 +146,7 @@ const Footer = () => {
                                     Terms & Conditions
                                 </Button>
                             </Link>
-                            <Link href="#">
+                            <Link href="/privacy-policy">
                                 <Button
                                     variant="link"
                                     className="text-slate-50 p-0 w-fit"
@@ -160,7 +160,7 @@ const Footer = () => {
             </div>
             <div className="pt-4 flex flex-col md:flex-row md:gap-4 items-center mt-2 border-t border-slate-800">
                 <p className="text-xs py-2 lg:mt-[1px]">
-                    &copy; Copyright {new Date().getFullYear()} Surendar PD
+                    Copyright  &copy; {new Date().getFullYear()} Surendar PD
                 </p>
                 <p className="text-xs">
                     Powered by

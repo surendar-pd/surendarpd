@@ -19,8 +19,7 @@ const Photography = () => {
                                     unoptimized
                                     src={`${item.img}`}
                                     alt={item.title}
-                                    // loading="lazy"
-                                    priority
+                                    loading="lazy"
                                 />
                             </ImageListItem>
                         ))}

@@ -59,7 +59,7 @@ const Contact = () => {
                         <div className="grid w-full gap-1.5">
                             <Label htmlFor="message">Your message</Label>
                             <Textarea
-                                className="h-56 md:max-h-[15.65rem] border-slate-500"
+                                className="h-56 md:max-h-[15.65rem] md:min-h-[15.65rem] border-slate-500"
                                 placeholder="What is your project about"
                                 id="message"
                             />
