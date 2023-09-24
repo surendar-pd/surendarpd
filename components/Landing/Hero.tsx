@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Landing = () => {
+const Hero = () => {
     return (
         <section>
             <div className="w-full flex flex-col md:flex-row lg:max-w-7xl lg:mx-auto gap-8 p-4 md:px-16 py-[40px] md:py-[80px] lg:py-[100px]">
@@ -25,4 +25,4 @@ const Landing = () => {
     );
 };
 
-export default Landing;
+export default Hero;

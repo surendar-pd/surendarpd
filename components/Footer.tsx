@@ -118,23 +118,6 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                    {/* <div className="">
-                        <h1 className="font-medium mb-2">Employers</h1>
-                        <div className="flex flex-col gap-2">
-                            <p className="text-sm cursor-pointer  hover:text-slate-800 transition-all duration-300">
-                                Employer Login
-                            </p>
-                            <p className="text-sm cursor-pointer  hover:text-slate-800 transition-all duration-300">
-                                Job Posting
-                            </p>
-                            <p className="text-sm cursor-pointer  hover:text-slate-800 transition-all duration-300">
-                                Reseacrh Report
-                            </p>
-                            <p className="text-sm cursor-pointer  hover:text-slate-800 transition-all duration-300">
-                                CV Database
-                            </p>
-                        </div>
-                    </div> */}
                     <div className="">
                         <h1 className="font-medium mb-2">Legal</h1>
                         <div className="flex flex-col">
@@ -158,9 +141,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="pt-4 flex flex-col md:flex-row md:gap-4 items-center mt-2 border-t border-slate-800">
+            <div className="pt-4 flex flex-col lg:flex-row lg:gap-4 items-center mt-2 border-t border-slate-800">
                 <p className="text-xs py-2 lg:mt-[1px]">
-                    Copyright  &copy; {new Date().getFullYear()} Surendar PD
+                    Copyright &copy; {new Date().getFullYear()} Surendar PD
                 </p>
                 <p className="text-xs">
                     Powered by
@@ -174,6 +157,19 @@ const Footer = () => {
                             className="text-slate-50 px-2 w-fit"
                         >
                             Next JS
+                        </Button>
+                    </Link>
+                    &
+                    <Link
+                        href="https://www.sanity.io/"
+                        target="_blank"
+                        className="hover:underline"
+                    >
+                        <Button
+                            variant="link"
+                            className="text-slate-50 px-2 w-fit"
+                        >
+                            Sanity
                         </Button>
                     </Link>
                 </p>
