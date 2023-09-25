@@ -21,6 +21,8 @@ import {
 	FormLabel,
 	FormMessage,
 } from '@/components/ui/form';
+import { useToast } from '../ui/use-toast';
+import axios from 'axios';
 
 const formSchema = z.object({
 	name: z.string(),
@@ -42,10 +44,27 @@ const Contact = () => {
 		},
 	});
 
-	function onSubmit(values: z.infer<typeof formSchema>) {
+	const { toast } = useToast();
+
+	async function onSubmit(values: z.infer<typeof formSchema>) {
 		setSubmitting(true);
 		try {
+			const response = await axios.post('/api/contact', { ...values });
+			console.log(response);
+			if (response.status === 200) {
+				form.reset();
+				toast({
+					title: 'Success',
+					description:
+						"Contact details submitted, I'll get back to you soon!",
+				});
+			}
 		} catch (e) {
+			toast({
+				variant: 'destructive',
+				title: 'Error',
+				description: 'Unable to send contact message, try again later',
+			});
 		} finally {
 			setSubmitting(false);
 		}
