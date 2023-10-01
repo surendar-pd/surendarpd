@@ -3,16 +3,24 @@ import Photography from "@/components/Landing/Photography";
 import PageLoader from "@/components/PageLoader";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { galleryQuery } from "@/sanity/lib/queries";
+import { client } from "../sanity/lib/client";
+import type { SanityDocument } from "@sanity/client";
 
-const PhotographyPage = () => {
+const PhotographyPage = ({ data }: { data: SanityDocument[] }) => {
     return (
         <main className="bg-slate-50 text-white">
             <PageLoader />
             <Header />
-            <Photography />
+            <Photography data={data} />
             <Footer />
         </main>
     );
 };
 
 export default PhotographyPage;
+
+export const getStaticProps = async () => {
+    const data = await client.fetch(galleryQuery);
+    return { props: { data } };
+};

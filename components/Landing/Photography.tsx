@@ -3,23 +3,27 @@ import React from "react";
 import Box from "@mui/material/Box";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import type { SanityDocument } from "@sanity/client";
+import { urlForImage } from "@/sanity/lib/image";
 
-const Photography = () => {
+const Photography = ({ data = [] }: { data: SanityDocument[] }) => {
+
+    console.log(data);
     return (
         <section className="">
             <div className="w-full lg:max-w-7xl lg:mx-auto gap-4 p-4 md:px-16 py-[40px] md:py-[80px] lg:py-[100px]">
-                <Box sx={{ width:"100%", height: "100%"}}>
+                <Box sx={{ width: "100%", height: "100%" }}>
                     <ImageList variant="masonry" cols={3} gap={8}>
-                        {itemData.map((item) => (
-                            <ImageListItem key={item.img}>
+                        {data.map((item, idx) => (
+                            <ImageListItem key={idx}>
                                 <Image
+                                    unoptimized
+                                    loading="lazy"
+                                    src={item?.image ?? ""}
+                                    className="w-full rounded-lg border-b border-black"
                                     width={10}
                                     height={10}
-                                    className="w-full rounded-xl"
-                                    unoptimized
-                                    src={`${item.img}`}
-                                    alt={item.title}
-                                    loading="lazy"
+                                    alt={item?.alt}
                                 />
                             </ImageListItem>
                         ))}

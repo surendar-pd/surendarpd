@@ -11,13 +11,21 @@ import LandingPageLayout from "@/layouts/LandingPageLayout";
 import type { SanityDocument } from "@sanity/client";
 import { client } from "../sanity/lib/client";
 import { projectsQuery } from "@/sanity/lib/queries";
+import { testimonialsQuery } from "@/sanity/lib/queries";
+import Testimonials from "@/components/Landing/Testimonials";
 
 const poppins = Space_Grotesk({
     subsets: ["latin"],
     weight: ["300", "400", "500", "600", "700"],
 });
 
-export default function Home({ data }: { data: SanityDocument[] }) {
+export default function Home({
+    data,
+    testimonials,
+}: {
+    data:SanityDocument[];
+    testimonials: SanityDocument[];
+}) {
     return (
         <main className={`${poppins.className} bg-primary text-slate-50`}>
             <PageLoader />
@@ -27,6 +35,7 @@ export default function Home({ data }: { data: SanityDocument[] }) {
                 <Work data={data} />
                 <WorkExp />
                 <WhatIDo />
+                <Testimonials testimonials={testimonials} />
                 <Contact />
             </LandingPageLayout>
         </main>
@@ -35,5 +44,6 @@ export default function Home({ data }: { data: SanityDocument[] }) {
 
 export const getStaticProps = async () => {
     const data = await client.fetch(projectsQuery);
-    return { props: { data } };
+    const testimonials = await client.fetch(testimonialsQuery);
+    return { props: { data, testimonials } };
 };

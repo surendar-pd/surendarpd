@@ -12,6 +12,9 @@ export default function Work({ data }: { data: SanityDocument[] }) {
                 <div className="flex flex-col gap-4 md:gap-8 lg:gap-12">
                     <h1 className="text-2xl md:text-4xl lg:text-6xl font-semibold">
                         Discover My Work
+                        <p className="text-base md:text-lg mt-2 text-slate-500">
+                            Here are some of my projects that I&apos;ve worked on.
+                        </p>
                     </h1>
                     <ProjectCard projects={data} />
                 </div>

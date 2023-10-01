@@ -49,8 +49,12 @@ const WhatIDo = () => {
             <div className="w-full lg:max-w-7xl lg:mx-auto gap-4 p-4 md:px-16 py-[40px] md:py-[80px] lg:py-[100px]">
                 <h1 className="text-2xl md:text-4xl lg:text-6xl font-semibold mb-4 md:mb-8 lg:mb-12">
                     What I Do
+                    <p className="text-base md:text-lg mt-2 text-slate-500">
+                        The tech&apos;s that I&apos;ve been using to build my
+                        projects.
+                    </p>
                 </h1>
-                <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                <div className="grid gap-4 md:gap-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                     {whatido.map((item, idx) => {
                         return (
                             <div

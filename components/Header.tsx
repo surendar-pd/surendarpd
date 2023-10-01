@@ -67,7 +67,7 @@ const Header = () => {
                                         return (
                                             <Link
                                                 key={idx}
-                                                href="#"
+                                                href={item.link}
                                                 className="hover:text-secondary transition-all duration-300 text-lg"
                                             >
                                                 {item.title}

@@ -2,9 +2,10 @@ import React from "react";
 import Link from "next/link";
 import type { SanityDocument } from "@sanity/client";
 import Image from "next/image";
-import { urlForImage } from "../../sanity/lib/image";
+import { urlForImage } from "@/sanity/lib/image";
 
 const ProjectCard = ({ projects = [] }: { projects: SanityDocument[] }) => {
+
     return (
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, idx) => {
@@ -17,7 +18,7 @@ const ProjectCard = ({ projects = [] }: { projects: SanityDocument[] }) => {
                     >
                         <Image
                             unoptimized
-                            priority
+                            loading="lazy"
                             src={urlForImage(project.mainImage)}
                             className="w-full rounded-t-lg border-b border-black"
                             width={10}
