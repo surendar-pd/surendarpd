@@ -22,5 +22,5 @@ export default PhotographyPage;
 
 export const getStaticProps = async () => {
     const data = await client.fetch(galleryQuery);
-    return { props: { data } };
+    return { props: { data }, revalidate: 300 };
 };

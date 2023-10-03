@@ -45,5 +45,5 @@ export default function Home({
 export const getStaticProps = async () => {
     const data = await client.fetch(projectsQuery);
     const testimonials = await client.fetch(testimonialsQuery);
-    return { props: { data, testimonials } };
+    return { props: { data, testimonials }, revalidate: 300 };
 };

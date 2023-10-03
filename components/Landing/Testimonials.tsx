@@ -4,23 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Testimonials = ({ testimonials = [] }: { testimonials: SanityDocument[] }) => {
-    console.log(testimonials);
-    const test = [
-        {
-            name: "John Doe",
-            image: "https://via.placeholder.com/150",
-            designation: "CEO, ABC Company",
-            review: "Surendar is a diligent professional and is always ready to go the extra mile to achieve planned objectives. I got to work with him on multiple projects, and his discipline to deliver timely results is admirable. His drive to learn and work on new technologies sets him apart. This approach equips him to deliver above and beyond the set goals.",
-            link: "https://google.com",
-        },
-        {
-            name: "John Doe",
-            image: "https://via.placeholder.com/150",
-            designation: "CEO, ABC Company",
-            review: "Surendar is one of the most adaptable developers I've ever met. He can quickly learn any new technology or framework and produce workable prototypes in a couple of days. Working with Surendar may appear to be fast-paced at times, but the learning you can gain from the process is enormous and really beneficial. When it comes to frontend development, he is meticulous about his ideas and ensures that everything works out precisely to the last detail.",
-            link: "https://google.com",
-        },
-    ];
 
     return (
         <section className="bg-white text-primary">
