@@ -64,7 +64,6 @@ export async function sendContactMessage(
 				.json({ message: 'contact/invalid-req-body' });
 		}
 	} catch (e) {
-		console.log(e);
 		return resonse
 			.status(500)
 			.json({ message: 'app/internal-server-error' });

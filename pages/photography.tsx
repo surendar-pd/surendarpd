@@ -10,7 +10,7 @@ import type { SanityDocument } from "@sanity/client";
 const PhotographyPage = ({ data }: { data: SanityDocument[] }) => {
     return (
         <main className="bg-slate-50 text-white">
-            <PageLoader />
+            <PageLoader title={"Photography"} />
             <Header />
             <Photography data={data} />
             <Footer />

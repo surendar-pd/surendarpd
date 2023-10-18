@@ -8,27 +8,66 @@ import { urlForImage } from "@/sanity/lib/image";
 
 const Photography = ({ data = [] }: { data: SanityDocument[] }) => {
 
-    console.log(data);
     return (
         <section className="">
             <div className="w-full lg:max-w-7xl lg:mx-auto gap-4 p-4 md:px-16 py-[40px] md:py-[80px] lg:py-[100px]">
-                <Box sx={{ width: "100%", height: "100%" }}>
-                    <ImageList variant="masonry" cols={3} gap={8}>
-                        {data.map((item, idx) => (
-                            <ImageListItem key={idx}>
-                                <Image
-                                    unoptimized
-                                    loading="lazy"
-                                    src={item?.image ?? ""}
-                                    className="w-full rounded-lg border-b border-black"
-                                    width={10}
-                                    height={10}
-                                    alt={item?.alt}
-                                />
-                            </ImageListItem>
-                        ))}
-                    </ImageList>
-                </Box>
+                <div className="md:hidden">
+                    <Box sx={{ width: "100%", height: "100%" }}>
+                        <ImageList variant="masonry" cols={1} gap={8}>
+                            {data.map((item, idx) => (
+                                <ImageListItem key={idx}>
+                                    <Image
+                                        unoptimized
+                                        loading="lazy"
+                                        src={item?.image ?? ""}
+                                        className="w-full rounded-lg border-b border-black"
+                                        width={10}
+                                        height={10}
+                                        alt={item?.alt}
+                                    />
+                                </ImageListItem>
+                            ))}
+                        </ImageList>
+                    </Box>
+                </div>
+                <div className="hidden md:block lg:hidden">
+                    <Box sx={{ width: "100%", height: "100%" }}>
+                        <ImageList variant="masonry" cols={2} gap={8}>
+                            {data.map((item, idx) => (
+                                <ImageListItem key={idx}>
+                                    <Image
+                                        unoptimized
+                                        loading="lazy"
+                                        src={item?.image ?? ""}
+                                        className="w-full rounded-lg border-b border-black"
+                                        width={10}
+                                        height={10}
+                                        alt={item?.alt}
+                                    />
+                                </ImageListItem>
+                            ))}
+                        </ImageList>
+                    </Box>
+                </div>
+                <div className="hidden lg:block">
+                    <Box sx={{ width: "100%", height: "100%" }}>
+                        <ImageList variant="masonry" cols={3} gap={8}>
+                            {data.map((item, idx) => (
+                                <ImageListItem key={idx}>
+                                    <Image
+                                        unoptimized
+                                        loading="lazy"
+                                        src={item?.image ?? ""}
+                                        className="w-full rounded-lg border-b border-black"
+                                        width={10}
+                                        height={10}
+                                        alt={item?.alt}
+                                    />
+                                </ImageListItem>
+                            ))}
+                        </ImageList>
+                    </Box>
+                </div>
             </div>
         </section>
     );

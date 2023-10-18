@@ -48,7 +48,6 @@ const Contact = () => {
 		setSubmitting(true);
 		try {
 			const response = await axios.post('/api/contact', { ...values });
-			console.log(response);
 			if (response.status === 200) {
 				form.reset();
 				toast({

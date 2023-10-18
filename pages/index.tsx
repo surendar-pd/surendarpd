@@ -28,7 +28,7 @@ export default function Home({
 }) {
     return (
         <main className={`${poppins.className} bg-primary text-slate-50`}>
-            <PageLoader />
+            <PageLoader title={"Surendar PD"} />
             <LandingPageLayout>
                 <Hero />
                 <About />
