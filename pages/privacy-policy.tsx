@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
     ];
     return (
         <div className="text-white">
-            <PageLoader />
+            <PageLoader title={"Privacy Policy"} />
             <Header />
             <div className="p-4 md:px-16 lg:max-w-6xl lg:mx-auto pb-16">
                 <h1 className="text-primary text-xl md:text-2xl lg:text-3xl font-semibold mb-8">
