@@ -4,21 +4,27 @@ import { Separator } from "@/components/ui/separator";
 const WorkExp = () => {
     const workExp = [
         {
-            title: "Co Founder",
-            company: "Codelance Devs",
-            duration: "2022 - Present",
+            title: "Developement Lead",
+            company: "Texus",
+            duration: "Mar 2023 - April 2024",
+            status: "done",
+        },
+        {
+            title: "Developer",
+            company: "Flookup Advisors",
+            duration: "Aug 2022 - Present",
             status: "active",
         },
         {
-            title: "Web Designer & Developer",
-            company: "Flookup Advisors",
-            duration: "2022 - Present",
+            title: "Developer",
+            company: "Codelance Devs",
+            duration: "Jan 2021 - Present",
             status: "active",
         },
         {
             title: "Frontend Developer",
             company: "Zapessy",
-            duration: "2021 - 2022",
+            duration: "Mar 2021 - May 2021",
             status: "done",
         },
     ];
